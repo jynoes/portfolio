@@ -38,11 +38,14 @@ nav {
 }
 
 .logo {
-    font-weight: 700;
+    font-weight: 100;
     text-decoration: none;
     color: var(--text-primary);
-    font-size: 1.2rem;
-    letter-spacing: -1px;
+    font-size: 1rem;
+}
+
+.logo-span {
+    color: #969696;
 }
 
 .nav-links a {
@@ -129,4 +132,28 @@ video {
 @media (max-width: 850px) {
     .grid { grid-template-columns: 1fr; }
     .container { padding: 0 20px; }
+}
+
+/* For navbar */
+
+/* Use higher specificity to override Bootstrap defaults */
+.navbar .custom-nav .nav-link-custom {
+    text-decoration: none;
+    color: #a0a0a0 !important; /* Forces the muted gray */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover State */
+.navbar .custom-nav .nav-link-custom:hover {
+    color: #1a1a1a !important;
+}
+
+/* The Active State - The prominent blue */
+.navbar .custom-nav .nav-link-custom.active {
+    color: #0070f3 !important; /* This is the prominent blue */
+    font-weight: 700;
+    pointer-events: none;
 }
