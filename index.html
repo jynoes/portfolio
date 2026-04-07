@@ -17,12 +17,12 @@
                 <a href="index.html" class="text-decoration-none text-secondary me-4 fw-light nav-link-custom active">Work</a>
                 <a href="fun.html" class="text-decoration-none text-secondary me-4 fw-light nav-link-custom">Fun</a>
                 <a href="about.html" class="text-decoration-none text-secondary me-4 fw-light nav-link-custom">About</a>
-                <a href="mailto:hello@email.com" class="text-decoration-none text-dark fw-medium">Resume</a>
+                <a href="/documents/Sabido - CV 2026.pdf" class="text-decoration-none text-dark fw-medium">Resume</a>
             </div>
         </div>
     </nav>
 
-    <header class="container my-5 py-5">
+    <header class="container my-5 pt-5 pb-2">
         <div class="row">
             <div class="col-lg-10">
                 <h1 class="display-4 fw-light ls-tight">
@@ -37,24 +37,24 @@
             <div class="col-md-6">
                 <a href="#" class="project-link group">
                     <div class="ratio ratio-16x9 overflow-hidden rounded-1 bg-secondary-subtle mb-3 card-motion">
-                        <video autoplay muted loop playsinline class="object-fit-cover">
-                            <source src="assets/coffee-video.mp4" type="video/mp4">
+                        <video muted loop playsinline class="object-fit-cover preview-video" preload="metadata">
+                            <source src="/videos/Duck Donuts Video.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <h3 class="h5 mb-1">Specialty Coffee Branding</h3>
-                    <p class="text-secondary small">Visual Identity & Shopify Development</p>
+                    <h3 class="h5 mb-1 project-title">Duck Donuts Philippines Website</h3>
+                    <p class="text-secondary small">Design & WordPress Development</p>
                 </a>
             </div>
 
             <div class="col-md-6">
                 <a href="#" class="project-link group">
                     <div class="ratio ratio-16x9 overflow-hidden rounded-1 bg-secondary-subtle mb-3 card-motion">
-                        <video autoplay muted loop playsinline class="object-fit-cover">
-                            <source src="assets/banking-video.mp4" type="video/mp4">
+                        <video muted loop playsinline class="object-fit-cover preview-video" preload="metadata">
+                            <source src="/videos/SG Bank Video.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <h3 class="h5 mb-1">Rural Bank Interface</h3>
-                    <p class="text-secondary small">UX Research & Design System</p>
+                    <h3 class="h5 mb-1">SG Bank Website</h3>
+                    <p class="text-secondary small">Design & WordPress Development</p>
                 </a>
             </div>
         </div>
@@ -65,5 +65,27 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Select all video elements with our custom class
+    const videos = document.querySelectorAll('.preview-video');
+
+    videos.forEach(video => {
+        // Find the parent link or container to trigger the hover
+        const card = video.closest('.project-link');
+
+        card.addEventListener('mouseenter', () => {
+            // Play the video when the mouse enters the card
+            video.play().catch(error => {
+                console.log("Autoplay prevented or video not loaded:", error);
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Pause and reset the video when the mouse leaves
+            video.pause();
+            // Optional: video.currentTime = 0; // Uncomment if you want it to restart every time
+        });
+    });
+</script>
 </body>
 </html>

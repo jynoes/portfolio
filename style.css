@@ -26,6 +26,10 @@ body {
     padding: 0 40px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Navigation */
 nav {
     padding: 40px 0;
@@ -38,7 +42,7 @@ nav {
 }
 
 .logo {
-    font-weight: 100;
+    font-weight: 400;
     text-decoration: none;
     color: var(--text-primary);
     font-size: 1rem;
@@ -104,6 +108,18 @@ video {
     object-fit: cover;
     filter: grayscale(20%);
     transition: var(--transition);
+}
+
+.preview-video {
+    opacity: 0.7; /* Dim the video when not active */
+    transition: opacity 0.4s ease, transform 0.6s ease;
+    filter: grayscale(10%);
+}
+
+.project-link:hover .preview-video {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05); /* Slight zoom in effect */
 }
 
 .project-card:hover .video-container {
