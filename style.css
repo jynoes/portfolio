@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #f8f8f8;
+    --bg-color: #f5f5f5;
     --text-primary: #1a1a1a;
     --text-secondary: #666666;
     --accent: #0070f3;
@@ -113,7 +113,7 @@ video {
 .preview-video {
     opacity: 0.7; /* Dim the video when not active */
     transition: opacity 0.4s ease, transform 0.6s ease;
-    filter: grayscale(10%);
+    filter: grayscale(5%);
 }
 
 .project-link:hover .preview-video {
@@ -169,7 +169,7 @@ video {
 
 /* The Active State - The prominent blue */
 .navbar .custom-nav .nav-link-custom.active {
-    color: #0070f3 !important; /* This is the prominent blue */
+    color: #188754 !important; /* This is the prominent blue */
     font-weight: 700;
     pointer-events: none;
 }
